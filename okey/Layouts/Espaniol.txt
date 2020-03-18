@@ -1,0 +1,14 @@
+ñ	Ctrl + N
+á	Ctrl + A
+é	Ctrl + E
+í	Ctrl + I
+ó	Ctrl + O
+ú	Ctrl + U
+Ñ	Ctrl + Shift + N
+Á	Ctrl + Shift + A
+É	Ctrl + Shift + E
+Í	Ctrl + Shift + I
+Ó	Ctrl + Shift + O
+Ú	Ctrl + Shift + U
+¡	Ctrl + =
+¿	Ctrl + Shift + =

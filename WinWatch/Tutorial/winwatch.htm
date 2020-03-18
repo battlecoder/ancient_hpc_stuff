@@ -1,0 +1,244 @@
+<html>
+<head><title>Winwatch v2.3 rev.3 Tutorial</title></head>
+<body bgcolor=#ffffff>
+<center>
+<b>Winwatch Tutorial</b>
+</center><br>
+<font size=2>
+Even when we can trick PPC applications to run on our Handhelds,
+dialogs are probably still 240x320 (and our screens most likely to be
+640x240) and some buggy implementations may even make some windows look
+as useless 5x5 squares in our screens.
+Winwatch is my attempt to fix all of this. 
+I'll split common problems with PPC apps into three groups:
+<ol>
+<li><a href=#problem1>Window or Dialog is so small that I can't see (nor use) most controls.</a></li>
+<li><a href=#problem2>Window or Dialog is bigger than my screen</a></li>
+<li><a href=#problem3>Window or Dialog is completely out of my sight</a></li>
+</ol>
+Of course I'll cover some misc features like:
+<ul>
+<li><a href=#mf1>Task Bar Up</a></li>
+<li><a href=#mf2>Start Minimized and Run at Startup</a></li>
+<li><a href=#mf3>Systray Menu</a></li>
+<li><a href=#mf4>Custom hotkeys and Toggle Keys</a></li>
+</ul>
+<br>
+</br>
+<p>
+<a name=problem1><h3>Window or Dialog is so small that I can't see (nor use) most controls</h3></a>
+<img src=clipped.jpg border=0><br clear=all>
+This is Acrobat 1.0 running on a Jornada 720 HPC. As you can see the Toolbar options
+seems to continue below "Zoom Out/Zoom Out Tool" but the dialog is clipped. Even when
+the dialog has an oversized width it obviously have an undersized height.
+For this, winwatch provides three functions:
+<ol>
+<li><a href=#p1f1>Fit to Content (Fix)</a></li>
+<li><a href=#p1f2>Make Sizeable (Border)</a></li>
+<li><a href=#p1f3>Manual Resize</a></li>
+</ol>
+
+<p>
+<a name=p1f1><h4><u>Fit To Content (Win+X)</u></h4></a>
+This is the most powerful feature of Winwatch. By default this function is used when
+you press Win+X on your PPC application while winwatch is running in the background
+(winwatch icon appears on your system tray).<br>
+When you press the assigned hotkey for <b>Fit to Content</b> winwatch will try
+to redimensionate the active window so EVERY control appear INSIDE of it, even if that
+implies making a 1000x1000 dialog that won't fit on your screen.<br>
+Calculating the size that a window must be for keeping everything visible isn't a
+simple task, there are some special controls that are a bit tricky to know how
+they'll behave and the size they need to be fully visible.<br>
+Winwatch allows you to chose the actions to be taken when attempting to resize
+a window. The three provided options are:
+<ol>
+<li><a href=#p1f1o1>Try PPC size first</a></li>
+<li><a href=#p1f1o2>TabCtl PostProcess</a></li>
+<li><a href=#p1f1o3>Not Only Dialogs</a></li>
+</ol>
+<p>
+<a name=#p1f1o1><h4>Try PPC Size first</h4></a>
+When this option is enabled, Winwatch will try resizing the dialog to PPC size (240x320)
+and then it'll test if everything fit inside this size (most likely if it was a PPC
+application). If at 240x320 there are still some windows components outside the window,
+then Winwatch will make the proper adjustments. If this option is not selected, winwatch
+will try to guess the size but itself without making an initial guess.
+</p>
+<p>
+<a name=#p1f1o2><h4>TabCtl postProcess</h4></a>
+Tab Controls are those provided in some applications to switch between "pages" in the
+current Dialog. They act as containers for grouped content.<br>
+For applications using Tab controls, winwatch let you enable the <b>Tab Control Post
+processing</b>. When Enabled Winwatch will attempt to find and resize Tab Controls
+AFTER resizing the dialog. Even when the standard procedure will guess the size needed
+for everything to fit inside the dialog, it'll only resize the dialog itself. Container
+elements like Tab Controls may still be at they original useless size thus limiting
+the visibility of some items. Try this option if your application uses tab controls.
+</p>
+<p>
+<a name=#p1f1o3><h4>Not Only Dialogs</h4></a>
+This option will enable the <b>More Than Dialogs</b> processing.<br>
+As stated before, winwatch will ONLY resize the dialog to fit the content (and optionally
+resize tab controls (if present) after resizing the dialog). This option changes this
+behavior. Some controls may contain more controls. These are called container controls.
+Tab Controls provide a good example.
+When this option is enabled winwatch will attempt to resize EVERY container control in a
+dialog to fit their content (tab controls, special lists, embedded dialogs, everything
+that may have its own contents). With this option enabled, TabCtl PostProcess will probably
+not needed.<br>
+However, this behavior may be undesirable because will resize scrolled containers to
+fit almost the whole collection of contained items thus oversizing them.
+</p>
+<br></br>
+<p>
+</p>
+<a name=p1f2><h4><u>Make Sizeable (Win+S)</u></h4></a>
+This feature is very simple. When <b>Fit to Content</b> fails to find the better
+size for a Dialog, you can resize the window for yourself. Pressing the <b>Make Sizeable</b>
+hotkey, you'll force current dialog to have a "resizing" border. You can then drag and drop
+this border to resize the dialog at your own will.<br>
+</p>
+<br>
+<p>
+</p>
+<a name=p1f3><h4><u>Manual Resize (Shift+Arrows)</u></h4></a>
+Another alternative for resizing a dialog is by means of the <b>Manual Resize</b> Hotkey.<br>
+Holding the chosen combination allows you to resize the active window with the arrow keys.
+The <b>Scroll/Resize Step</b> setting in the System tray menu has effect on the amount enlarged
+or reduced when you resize once.
+<br>
+</p>
+<br>
+<p></p>
+<p>
+<a name=problem2><h3>Window or Dialog is bigger than my screen</h3></a>
+<img src=oversized.jpg border=0><br clear=all>
+Once we have resized the dialog to fit everything that it should contain, we'll probably
+have a window that is larger than our screen. In the picture you can see the same dialog
+as before (from Acrobat 1.0) but auto-resized with the <b>Fit To Content</b> Feature.<br>
+Now the dialog is obviously taller than our 640x240 screen. How winwatch will fix that?
+Currently offering you two more functions.
+
+<ol>
+<li><a href=#p2f1>Hide/Show TaskBar</a></li>
+<li><a href=#p2f2>Windows Scrolling</a></li>
+</ol>
+<p>
+<a name=p2f1><h4><u>Hide/Show TaskBar (Win+Z)</u></h4></a>
+The most humble attempt we can make for making a whole window visible is to hide
+the task bar.<br>
+While WindowsCE's auto-hide will make this very well isn't a comfortable way most of time. Pressing
+the <b>Hide/Show TaskBar</b> hotkey will hide (if shown) or show (if hidden) the task bar
+without disabling the Start Menu.
+</p>
+<br>
+<p>
+<a name=p2f2><h4><u>Windows Scrolling (Win+ up/down/left/right)</u></h4></a>
+Obviously for a 320px tall dialog hiding the taskbar won't fix a thing, our screen
+is still 240px in height. In these cases Winwatch will let you scroll the window
+by holding the <b>Windows Scrolling</b> hotkey and pressing the arrow keys.
+</p>
+</p>
+<br>
+<p>
+<a name=problem3><h3>Window or Dialog is completely out of my sight</h3></a>
+This actually will happen with some applications like (again) Acrobat Reader 1.0.
+Try opening the Text Find Dialog. You will see nothing happening but the Find dialog
+is actually there. It's just that is outside your screen.<br>
+The remaining functions offered by winwatch can solve this.
+<ol>
+<li><a href=#p3f1>Center Window</a></li>
+<li><a href=#p3f2>Fit in Visible Area</a></li>
+</ol>
+<p>
+<a name=p3f1><h4><u>Center Window (Win+T)</u></h4></a>
+There's no much to say about this. When you press the <b>Center Window</b> Hotkey, the
+active dialog will be brought right before your eyes, completely centered on your screen.
+</p>
+<p>
+<a name=p3f2><h4><u>Fit In Visible Area (Win+F)</u></h4></a>
+<img src=coords.jpg border=0><br clear=all>
+
+This option is far more flexible than Centering the window. In the main Winwatch Dialog
+you can setup a "visible area". You'll need to write the (x,y) coordinates of the upper-left
+and lower-right corners of your custom "visible area".<br>
+When you press the <b>Fit to Area</b> hotkey, Winwatch will attempt to put every(or only
+active if selected) window(s) inside your defined area. You also have some options for doing
+so.<br>
+<ol>
+<li><a href=#p3f2o1>Only to Active</a></li>
+<li><a href=#p3f2o2>Fix Position</a></li>
+<li><a href=#p3f2o3>Fix Size</a></li>
+</ol>
+<p>
+<a name=#p3f2o1><h4>Only to Active</h4></a>
+By Default when you press the <b>Fit to Area</b> hotkey winwatch will look for EVERY
+single window in your screen and will attempt to fit it inside your defined visible area.
+When this options is enabled, Winwatch will only try to fit the ACTIVE dialog or window,
+that is, the one that supposes to have the Windows Focus.
+</p>
+<p>
+<a name=#p3f2o2><h4>Fix Position</h4></a>
+When this option is enabled, Winwatch will try first to "move" the dialog(s) so it(they)
+fit inside your visible area.
+</p>
+<p>
+<a name=#p3f2o3><h4>Fix Size</h4></a>
+If After moving the window (if <i>Fix Position</i> was selected) the dialog(s) is(are)
+still out of the boundaries of your defined area and this option is selected, Winwatch
+will then clip the dialog(s) so it(they) will completely fit inside the area you defined.
+</p>
+</p>
+
+<br></br>
+<p>
+
+<h3><a name=mf1>Task Bar Up</a></h3>
+Some OS will let you put the task bar in the upper part of your screen. Selecting this option
+will force your taskbar to act like that. Note please that WindowsCE isn't made for having
+the taskbar up in the screen so you may get weird behaviors with this option. It's still
+nice to have the taskbar up there :)
+<br>
+<h3><a name=mf2>Start Minimized and Run at Startup</a></h3>
+Selecting the Run at Startup option, Winwatch will place a shortcut to its current location
+in the \Windows\Startup Folder so winwatch will be automatically run everytime WindowsCE
+initializes (i.e after each soft reset).
+<br>
+<h3><a name=mf3>Systray Menu</a></h3>
+When Winwatch is completely minimized on the system tray a special menu will become
+available. By tapping ONCE on the winwatch icon in the systray will show a menu that gives you
+quick access to settings change and also optional settings like "Scroll steps" (i.e the amount
+of pixels that a window will scroll when you press one of the arrow keys. Also applies for
+manual resize)
+<br>
+<h3><a name=mf4>Custom hotkeys and Toggle Keys</a></h3>
+You can edit the key combinations used to trigger every action that winwatch performs.<br>
+For each function (except Scroll and Manual Resize) you can setup a <b>HOLD</b> key and an <b>ACTION</b> key. For
+Manual Resize and Scroll just the <b>HOLD</b> key is customizable.<br>
+The <b>HOLD</b> key is the one you must hold while pressing the <b>ACTION</b> key in order to execute
+the function.<br>
+If you are using a device without keyboard, you won't probably be able to "hold" a key while
+pressing another one. For those cases winwatch will show again a special behavior.<br>
+Keys that can actually be held are <i>Win, Control, Alt and Shift</i>. If you setup a key OTHER than
+one of them Winwatch will make it act like a <b>Toggle Key</b>. That means that whenever you press
+that key Winwatch will prepare to execute the function at the press of the action key.
+As long as you don't press the toggle key again that function will be available.
+<br>Let's see an example:<br>
+Let's say you setup the <b>Window Scrolling</b> hotkey to be Z+arrows. Of course "Z" isn't
+a "holdable" key. Once we have changed the hotkey, minimize Winwatch and run the PPC application
+with the dialog you wish to scroll. Then press the "Z" key. You have just entered the <b>SCRL
+Mode</b>. You can check if there's any toggle mode active in the systray menu. Now that you are in the
+SCRL mode, you can scroll the window by pressing the arrow keys (yes, without holding a thing).
+They'll left their original functionality and'll become scrolling keys. Pressing "Z" again will disable
+this mode and the Systray menu will show  <b>Toggle:NONE</b>. Now when you press the arrow keys they'll
+execute their normal function again.<br>
+<p>
+You may of course wish to set a single key to activate a function. Nothing of holding. In those
+cases just set the <b>HOLD</b> key to the one you desire for triggering the function and the <b>ACTION</b>
+key to None.
+<br>
+</p>
+</p>
+</font>
+</body>
+</html>

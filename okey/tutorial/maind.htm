@@ -1,0 +1,102 @@
+<html>
+<head><title>OKey v 1.50 Tutorial</title></head>
+<body bgcolor=#ffffff>
+<center>
+<h3>Creating *.OK Layouts</h3><br>
+<img src=maindlg.jpg border=0><br clear=all>
+</center>
+<font size=2>
+Here's the OKey Main dialog. I won't explain it in details since there's nothing
+to understand here.<br>
+Basically in this screen you can load layouts files (2) and the name of the layout
+will appear in (1). Once a layout is loaded, you can enable (3) or disable it (4)
+whenever you want. The icon in the systray will appear greyed when disabled.<br>
+At your right you have the Options panel. OKey can create a shortcut in the \Windows\Startup
+foder so it will run when WindowsCE starts (i.e after a soft reset). Just check the (5)
+box and OKey will create the shortcut. Unchecking the box will make OKey to remove it.<br>
+Checking (12) will cause that OKey start fully minimized in the system tray.<br>
+
+When OKey is launched it will load the last layout you used if (6) is checked.<br>
+OKey layouts are files with the *.ok extension. Usually there shouldn't be any application
+associated with these files. Checking the (7) box will associate OKey with these files,
+so whenever you open a *.OK file OKey will be launched and the layout will be loaded.<br>
+Pressing (10) will show a window with the version number and some info about the development
+of OKey.<br>
+Pressing (11) will fully minimize Okey into the system tray. When fully minimized, you can
+tap ONCE on the systray icon to display a pop-up menu with some options.<br>
+That's for basic usage. However, you will probably like to create your own customized layout,
+with your own mappings and symbols according to the language you speak.<br>
+Pressing (8) will launch the layout Editor:
+<p align=center>
+<img src=sch.jpg border=0>
+</p>
+OKey will let you perform two kind of mappings:
+<ol>
+<li><a href=#one2one>One-to-One mapping</a></li>
+<li><a href=#unicode>Unicode Combinations</a></li>
+</ol>
+Once you have finished with your layout, you'll need to give it a name in the textbox above
+the "Save..."(1) Button and press (1) for saving it into a file.
+<br>
+<p>
+<h4><a name=one2one>One-to-One Mapping</a></h4>
+The most basic function offered by OKey is a one-to-one mapping (i.e each key will
+be translated into another one). "Mapping" <b>A</b> into <b>B</b> will cause that whenever you
+press <b>A</b> in your keyboard the system will be tricked to think that you really pressed
+<b>B</b>.<br>
+The Mapping Table is shown through lists (4) and (6).
+Whenever you select a key in the (4) list, the mapped value will be highlighted on the (6)
+column. Same goes in the other way.<br>
+<b>To remap</b> a key from the list (4) you can either:
+<ul>
+<li>Press the "New"(3) Button: The button will now read "...". Press the key you want to
+map in your keyboard and will be automatically selected from list (4).
+<li>Select the key from the (4) list by yourself and press the "->"(5) button.</li>
+</ul>
+Once done any of either actions, the "->"(5) button will now read "..." indicating that is
+waiting for the new value. Press on your keyboard the key you want to be the mapping of
+the one you selected in (4).<br>
+If your keyboard doesn't have the Key you want to simulate or map you can use
+the provided <b>Tool</b> to simulate the keystroke. Select a key from list (13)
+and press <b>Simulate Key</b>(2). It has the same effect that the physical press of that
+key.
+</p>
+<br>
+<p></p>
+<p>
+<h4><a name=unicode>Unicode Combinations</a></h4>
+<b>UNICODE</b> is a standard that defines a UNIQUE code for EVERY single character of
+every single language. WindowsCE handles Unicode for displaying text.<br>
+Since <b>UNICODE</b> defines thousands and thousands of characters it has been broken
+down into character ranges according to the language they belong. These tables can be
+found at <a href=http://www.unicode.org target=_blank>http://www.unicode.org</a>.<br>
+Different <b>fonts</b> available for computers implement different character ranges. That's
+why some fonts have characters that the other doesn't have. One of the most complete
+<b>UNICODE</b> fonts is the <b>MS Arial Unicode</b> which contains 51180 glyphs, a large
+subset of the <b>UNICODE</b> standard. The <b>MS Arial Unicode</b> font itself is
+about <b>30 MB</b> in size.<br>
+In OKey you can create up to 256 Unicode combinations. The limit was stablished due
+indexing and memory issues, it may be expanded in future versions of OKey if needed.
+You can create key combinations or single keystrokes for generating Unicode characters.<br>
+Combinations implemented in the current layout are listed in (8).<br>
+In order to create a new combination for a given <b>UNICODE</b> character you'll need to
+follow these steps:
+<ol>
+<li> Select from (12) the <b>Modifiers</b> (Keys to be held) for your combination (if any).</li>
+<li> Press the "Press a Key"(7) button. Now the button will read "...".</li>
+<li> Press in your keyboard (or use the <b>Simulate Key</b> tool to press) the key you want to use
+in combination with the modifiers selected in step 1.</li>
+<li> The pressed button will be shown below (7).</li>
+<li> Optionally select a font from (11) that you know it contains the character you want. It's just
+for properly displaying the character on the preview box.</li>
+<li> Search and select from (14) the <b>Unicode</b> character you want to assign to your combination. You
+can type the number if you know it or look for the character (may take you a long time if you don't know
+where it's most likely to be) by using the arrow keys.</li>
+<li> Once the character you want to assign is displayed on the preview box press the "Add" (9) Button to register
+the combination.
+</ol>
+You can delete a combination any time by selecting it from (8) and pressing the "Delete" (10) Button.
+</font>
+</center>
+</body>
+</html>

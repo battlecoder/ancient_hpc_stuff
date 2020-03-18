@@ -1,0 +1,273 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_QICON               ICON    DISCARDABLE     "icon.ico"
+IDI_TRAYICON            ICON    DISCARDABLE     "tray.ico"
+IDI_TRAYICON2           ICON    DISCARDABLE     "tray2.ico"
+IDI_FILEICON            ICON    DISCARDABLE     "file.ico"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDIALOG DIALOG DISCARDABLE  0, 0, 290, 95
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "OKey Keyboard Utility"
+FONT 8, "Tahoma"
+BEGIN
+    PUSHBUTTON      "...",IDLOAD,135,11,16,11
+    DEFPUSHBUTTON   "&Use",IDAPPLY,107,28,44,14
+    PUSHBUTTON      "&Disable",IDDISABLE,107,46,44,14
+    CONTROL         "Load At &Startup",IDC_RUNSTARTUP,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,164,9,67,11
+    CONTROL         "Auto &Load last layout",IDC_LOADLASTCHECK,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,164,20,84,11
+    CONTROL         "Associate &with *.ok Files",IDC_ASSOCIATEFILES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,164,31,94,11
+    CONTROL         "Start &Minimized",IDC_STARTMINIMIZED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,164,42,64,11
+    PUSHBUTTON      "&Edit Layout",IDEDIT,166,55,56,15
+    PUSHBUTTON      "&Advanced",IDC_ADVANCED,228,55,52,15
+    PUSHBUTTON      "A&bout",IDABOUT,231,79,34,12
+    PUSHBUTTON      "_",IDMINIMIZE,269,79,17,12
+    LTEXT           "",IDC_FILEBOX,6,11,124,12,WS_BORDER | NOT WS_GROUP,
+                    WS_EX_STATICEDGE
+    CTEXT           "http://www.damnsoft.org",IDC_FILEBOX2,6,79,218,12,NOT 
+                    WS_GROUP,WS_EX_STATICEDGE
+    CONTROL         110,IDC_STATIC,"Static",SS_BITMAP,9,28,80,27
+    GROUPBOX        "Layout File",IDC_STATIC,2,1,154,74
+    GROUPBOX        "Options",IDC_STATIC,160,1,128,74
+END
+
+IDD_KEYLAYDLG DIALOG DISCARDABLE  0, 0, 411, 114
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Layout Editor"
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_LAYOUTNAME,5,22,77,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Save...",IDSAVE,48,37,34,13
+    LISTBOX         IDC_SIMKEY,91,9,64,28,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Simulate  Key",IDC_SIMULATEKEY,88,42,68,13
+    LISTBOX         IDC_KEYLISTA,4,58,60,53,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "New",IDC_MAPNEWBTTN,67,62,27,15,BS_MULTILINE
+    PUSHBUTTON      "=>",IDC_MAP2BTTN,67,95,27,15,BS_MULTILINE
+    LISTBOX         IDC_KEYLISTB,97,58,59,53,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "ALT",IDC_ALTCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,9,28,10
+    CONTROL         "CTRL",IDC_CTRLCHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,19,33,10
+    CONTROL         "SHIFT",IDC_SHIFTCHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,165,29,32,10
+    CONTROL         "WIN",IDC_WINCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    165,39,30,10
+    PUSHBUTTON      "Press a Key",IDC_PRESSKEY,204,13,51,11
+    EDITTEXT        IDC_UNIEDIT,275,32,31,13,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_EDITSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,307,31,11,14
+    LISTBOX         IDC_COMBLIST,164,51,111,56,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_UNIADD,279,50,35,12
+    PUSHBUTTON      "Delete",IDC_UNIDEL,279,91,35,12
+    LISTBOX         IDC_PREVIEWFONT,320,23,84,83,WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Tools",IDC_STATIC,88,0,71,40
+    LTEXT           "Name:",IDC_STATIC,6,12,47,8
+    GROUPBOX        "This Layout",IDC_STATIC,2,0,83,55
+    CTEXT           "",IDC_UNIPREV,281,11,23,18,WS_BORDER | NOT WS_GROUP,
+                    WS_EX_STATICEDGE
+    LTEXT           "Font for preview",IDC_STATIC,320,11,73,8
+    CTEXT           "",IDC_KEYBOX,203,27,54,12,WS_BORDER | NOT WS_GROUP,
+                    WS_EX_STATICEDGE
+    GROUPBOX        "Unicode Combinations",IDC_STATIC,161,0,248,111
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 161, 113
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "About OKey"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "OKey Keyboard Remapper",IDC_STATIC,50,14,93,10
+    LTEXT           "<V>",IDC_VERSION,50,23,93,8
+    CTEXT           "Thanks to Prathamesh Kulkarni for his code on Keyboard Hooking under Windows CE",
+                    IDC_STATIC,22,50,115,35,0,WS_EX_STATICEDGE
+    ICON            IDI_QICON,IDC_STATIC,18,15,20,20
+    GROUPBOX        "",IDC_STATIC,16,42,127,47
+    LTEXT           "Elias Zacarias",IDC_STATIC,61,34,51,9
+    CTEXT           "www.damnsoft.org",IDC_STATIC,16,94,127,11,0,
+                    WS_EX_STATICEDGE
+    GROUPBOX        "About OKey",IDC_STATIC,1,1,153,108
+END
+
+IDD_ADVANCED DIALOGEX 0, 0, 173, 113
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Advanced Setup"
+FONT 8, "Tahoma"
+BEGIN
+    LISTBOX         IDC_QALIST,8,12,110,36,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add..",IDC_OKADD,123,11,37,12
+    PUSHBUTTON      "Del",IDC_OKDEL,123,26,37,12
+    PUSHBUTTON      "Setup New",IDC_NEWONOFF,97,65,69,13
+    CONTROL         "Never map ESC Key.",IDC_NEVERESC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,2,85,81,10
+    CONTROL         "Use NUMPAD for UNICODE.",IDC_USENUMPAD,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,2,95,104,11
+    DEFPUSHBUTTON   "Ok",IDC_OK,128,96,43,14,0,WS_EX_CLIENTEDGE
+    GROUPBOX        "Quick Access Layouts",IDC_STATIC,2,3,167,49
+    CTEXT           "",IDC_OFFBOX,12,66,83,12,WS_BORDER | NOT WS_GROUP,
+                    WS_EX_STATICEDGE
+    GROUPBOX        "Device ON/OFF Key",IDC_STATIC,2,53,168,29
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 288
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_KEYLAYDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 409
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 157
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_ADVANCED, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 171
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 110
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Mexican) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESM)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MEXICAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_KEYBOARD            BITMAP  DISCARDABLE     "keyboard.bmp"
+#endif    // Spanish (Mexican) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

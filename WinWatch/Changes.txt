@@ -1,0 +1,124 @@
+v 2.4 [Ayg's Hell Dejavu] Release xx/xx/2006
+-------------------------------------------- 
+New Features:
+	- Do Landscape
+
+Improvements/Fixes:
+	- Simpler Hotkey Setup
+	- Winwatch.ini is saved in the folder where
+	the program IS instead of filesystem root.
+
+v 2.3 rev.3 [Ayg's Hell] Dejavu  08/21/2006
+-------------------------------------------- 
+ - x86 build Included
+
+v 2.3 rev.3 [Ayg's Hell] Release 02/21/2006
+-------------------------------------------- 
+New Features:
+ 
+Improvements/Fixes:
+ - Improved initial guess for sizes.
+ - Never resize ComboBoxes
+ - Tighest fit
+ - Old documentation removed.
+
+
+ 
+v 2.3 rev.2 [Ayg's Hell] Release 02/19/2006
+-------------------------------------------- 
+New Features:
+ - The Resize with arrows is back.
+ - Small Tutorial included.(Designed to
+   be viewed on the handheld)
+ 
+Improvements/Fixes:
+ - Toggle Mode Update after changing keys.
+
+
+
+v 2.3 [Ayg's Hell] Release 02/15/2006
+--------------------------------------- 
+New Features:
+ - (Option)Parse more than dialogs.
+ - System tray menu.
+ - 'Make Sizeable' function.
+ - (Option)Run at startup.
+ - 'Show/Hide' taskbar function.
+
+Improvements/Fixes:
+ - Custom scrolling steps.
+ - EXE small icon fixed.
+ - No forced tab post process for TryPPCSizeFirst
+ - Ignores hidden elements.
+ - Improved Hotkey Dialog show/hide.
+ - Replace Manual Resize with 'Make Sizeable'
+ - Changed default options.
+ - Quit Confirmation Dialog
+ - Updated "Fit to Area" explanation pic. (lol)
+ - Fix FullScreen windows after taskbar up/down
+ 
+
+
+v 2.2 [Zero] Release 02/01/2006
+---------------------------------------  
+Improvements/Fixes:
+ - Completed Single Keystroke support
+ - 'Clear' button for devices without keyboard
+
+
+
+v 2.1 [Nano] Release 01/31/2006
+---------------------------------------
+New Features:
+  - 'Center' active Window
+  - Customizable HotKeys!!
+  
+Improvements/Fixes:
+  ? New Icon :p
+
+
+
+v 2.0 [Rebirth] Release 10/03/2005
+---------------------------------------
+New Features:
+ - 'Try PPC Size First' option
+
+ 
+Improvements/Fixes:
+ - 'Fit to Content' code re-remade :P
+ - Some GUI changes
+ - Auto TaskBarUp Update
+
+
+v 1.234 [Evolution] Release 09/26/2005
+---------------------------------------
+New Features:
+ - Manual Resize (Shift + [Arrows])
+ - TabControl Postprocessing option
+ 
+Improvements/Fixes:
+ - 'Fit to Content' code remade
+ - Minor GUI changes
+ - Win+C Replaced with Win+X Hotkey (Win+C is
+   Windows' Control Panel Hotkey)
+
+v 0.999 [MoreThan Evil] Rel. 09/25/2005
+---------------------------------------
+New Features:
+ - Resize active to content (Win + C)
+ - Scroll active window (Win + [Arrows])
+ 
+Improvements/Fixes:
+ - Hotkey icons
+ 
+v 0.333 [Half Evil] Release 09/22/2005
+---------------------------------------
+New Features:
+ - Save/Read Settings
+ - Start Minimized
+ - Only to focused window
+ - Taskbar Up
+ - Custom Screen Area
+ 
+Improvements/Fixes:
+ - Only apply changes to dialogs

@@ -1,0 +1,216 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_MINISCREEN          BITMAP  DISCARDABLE     "miniscreen.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WINWATCH DIALOG DISCARDABLE  0, 0, 160, 117
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_STATICEDGE | 0x80000000L
+CAPTION "Winwatch v2.4 [Ayg's Hell Dejavu]"
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "Start &Minimized",IDC_STARTMIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,9,64,10
+    CONTROL         "&Taskbar Up",IDC_TASKBARUP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,19,55,10
+    CONTROL         "Run at Start&up",IDC_RUNSTARTUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,29,64,10
+    CONTROL         "Try PP&C Size First",IDC_TRYPPCFIRST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,51,72,10
+    CONTROL         "Ta&bCtl Post Process",IDC_TABCTLPROC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,61,79,10
+    CONTROL         "&Not Only Dialogs",IDC_NOTONLYDLG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,71,69,10
+    PUSHBUTTON      "Sa&ve Options",IDSAVEBUTTON,2,86,52,13
+    PUSHBUTTON      "&Keys",IDHKEYSBTTN,57,86,27,13
+    CONTROL         "Only to &Active",IDC_FOCUSONLY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,91,11,61,10
+    CONTROL         "Fix &Position",IDC_CHECKXY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,91,21,52,10
+    CONTROL         "Fix &Size (to fit)",IDC_CHECKWH,"Button",
+                    BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,91,31,63,10
+    EDITTEXT        IDC_X1,93,43,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_Y1,120,43,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_X2,104,84,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_Y2,132,84,20,12,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "X",IDQUIT,124,103,15,12
+    DEFPUSHBUTTON   "_",IDHIDEBTTN,142,103,15,12
+    CONTROL         106,IDC_MINISCRN,"Static",SS_BITMAP,97,57,53,25
+    CTEXT           ",",IDC_STATIC,111,45,10,8
+    CTEXT           ",",IDC_STATIC,124,85,10,8,NOT WS_GROUP
+    GROUPBOX        "Fit2Area Options",IDC_STATIC,88,1,70,98
+    GROUPBOX        "Fix Options",IDC_STATIC,0,42,85,41
+    CTEXT           ":: www.damnsoft.org ::",IDC_STATIC,3,104,115,11,
+                    WS_BORDER
+    GROUPBOX        "General Options",IDC_STATIC,1,1,84,40
+END
+
+IDD_KEYEDITOR DIALOG DISCARDABLE  0, 0, 160, 116
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_STATICEDGE
+CAPTION "Hotkeys Editor"
+FONT 8, "Tahoma"
+BEGIN
+    PUSHBUTTON      "<Press>",IDC_TBKEYBTTN,55,32,33,12
+    PUSHBUTTON      "<Press>",IDC_RESKEYBTTN,55,47,33,12
+    PUSHBUTTON      "<Press>",IDC_FITCNTKEYBTTN,125,5,33,12
+    PUSHBUTTON      "<Press>",IDC_FITAREAKEYBTN,125,20,33,12
+    PUSHBUTTON      "<Press>",IDC_RESIZEKEYBTTN,55,82,33,12
+    PUSHBUTTON      "<Press>",IDC_SCROLLKEYBTTN,55,97,33,12
+    PUSHBUTTON      "<Press>",IDC_CNTRKEYBTTN,125,35,33,12
+    PUSHBUTTON      "Defaults",IDDEFAULT,113,75,38,13
+    PUSHBUTTON      "Clear Key",IDCLEAR,113,91,39,14,0,WS_EX_CLIENTEDGE
+    LTEXT           "Scroll:",IDC_STATIC,9,97,23,11
+    LTEXT           "Fix:",IDC_STATIC,108,6,16,11
+    LTEXT           "Fit:",IDC_STATIC,109,20,10,11
+    LTEXT           "Center:",IDC_STATIC,97,36,28,11
+    LTEXT           "Hide TaskBar:",IDC_STATIC,4,31,49,11
+    LTEXT           "Resize:",IDC_STATIC,8,84,25,11
+    PUSHBUTTON      "<Press>",IDC_HOLDKEY,17,11,60,12
+    LTEXT           "Make Sizeable:",IDC_STATIC,3,46,50,11
+    GROUPBOX        "Global Hold/Toggle",IDC_STATIC,2,1,95,26
+    GROUPBOX        "[KEY] + Arrows",IDC_STATIC,2,73,94,41
+    GROUPBOX        "Options",IDC_STATIC,106,63,52,51
+    LTEXT           "Landscape:",IDC_STATIC,10,61,39,11
+    PUSHBUTTON      "<Press>",IDC_LANDKEYBTTN,55,61,33,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_WINWATCH, DIALOG
+    BEGIN
+        RIGHTMARGIN, 158
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_KEYEDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 158
+        BOTTOMMARGIN, 114
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_WINWATCH            ICON    DISCARDABLE     "WinWatch.ICO"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Mexican) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESM)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MEXICAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+APP_ICON                ICON    DISCARDABLE     "trayicon.ico"
+#endif    // Spanish (Mexican) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

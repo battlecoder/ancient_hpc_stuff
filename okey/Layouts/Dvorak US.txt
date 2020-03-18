@@ -1,0 +1,42 @@
+'	Q
+"	Shift + Q
+,	W
+<	Shift + W
+.	E
+>	Shift + E
+P	R
+Y	T
+F	Y
+G	U
+C	I
+R	O
+L	P
+/	Ctrl + P
+?	Ctrl + Shift + P
+=	Ctrl + \
++	Ctrl + Shift + \
+\	\
+|	Shift + \
+A	A
+O	S
+E	D
+U	F
+I	G
+D	H
+H	J
+T	K
+N	L
+S	;
+-	,
+_	"
+;	Z
+:	Shift + Z
+Q	X
+J	C
+K	V
+X	B
+B	N
+M	M
+W	,
+V	.
+Z	/

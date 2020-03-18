@@ -1,0 +1,85 @@
+08/21/2006 v2.0[2MyBeloved]
+------------------------------------
+New Features:
+ - NUMPAD usage is customizable.
+   (Should allow usage on some specific
+   devices)
+ 
+ 
+Fixes/Improvements:
+ - Fixed a mistake in "save button" reference.
+ 
+03/26/2006 v1.90 [BeforeDawn]
+------------------------------------
+New Features:
+ - New "Never Map ESC" option
+   (some apps require the keys to be
+   passed as-is)
+ - WinCE2.11 binaries (untested though)
+ - Hardware Keys special treat
+   (now they can be mapped)
+ 
+Fixes/Improvements:
+ - Fixed? UNICODE hold/release
+ system.
+ 
+
+
+02/22/2006 v1.50 [Twilight]
+------------------------------------
+New Features:
+ - Start Minimized Option
+ 
+Fixes/Improvements:
+ - Assigned keys for checkboxes
+   in main dialog.
+ - Minor GUI adjustments
+ - Updated docs.
+
+
+
+02/19/2006 v1.337 [Hacker's Choice]
+------------------------------------
+New Features:
+ - Load on startup setting.
+ - Mini Layout Creation Tutorial Included.
+   (Designed to be seen in the handheld)
+
+Fixes/Improvements:
+ - Last Quick-loaded Layout counts
+   as "last file"
+ - Quit Confirmation auto-focus.
+ - Load layout on running instance 
+   (if any).
+  
+ 
+
+02/12/2006 v1.0b[BeMyValentine]
+-------------------------------
+New Features:
+ - Advanced Options Dialog.
+ - System Tray Menu for status viewing.
+ - Quick Layout access from systray.
+
+Fixes/Improvements:
+ - Quit Confirmation
+ - Power Key setup.
+
+
+02/11/2006 v0.463b[Paleolithic]		(Unreleased)
+-------------------------------
+New Features:
+ - *.OK Layout File association.
+ - Command Line File Loading
+
+
+Fixes/Improvements:
+ - Jornada ON/OFF Bug fixed
+ - More Complete KeyCode tables.
+ - Improved GUI for HPC screen.
+ 
+ 
+ 
+
+02/08/2006 v -0.1[Mesozoic]			(Original Release)
+-------------------------------

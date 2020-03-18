@@ -1,0 +1,25 @@
+
+void ResizeToFitAll(HWND hwnd){
+	RECT rct;
+	HWND child;
+	long px, py, maxh,maxw;
+	
+	GetWindowRect(hwnd,&rct);
+	px = rct.left;
+	py = rct.top;
+
+	child = GetWindow(hwnd,GW_CHILD);
+	if (child){
+		maxw = 0;
+		maxh = 0;
+		while(child){
+			GetWindowRect(child,&rct);
+			rct.right -= px;
+			rct.bottom -= py;
+			if (rct.right+6 > maxw)  maxw = rct.right+6;
+			if (rct.bottom+6 > maxh) maxh = rct.bottom+6;
+			child = GetWindow(child,GW_HWNDNEXT);
+		}
+		MoveWindow(hwnd,px,py,maxw,maxh,TRUE);
+	}
+}

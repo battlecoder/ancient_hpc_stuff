@@ -1,0 +1,62 @@
+Microsoft eMbedded Visual Tools Workspace File, Format Version 3.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "GAPI720"=.\src\GAPI720\GAPI720.VCP - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name LibLCD
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "J720Video"=.\J720Video.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GAPI720
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name LibLCD
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "LibLCD"=.\src\LibLCD\LibLCD.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

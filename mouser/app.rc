@@ -1,0 +1,157 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_TRAYICON            ICON    DISCARDABLE     "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDLG DIALOGEX 0, 0, 178, 98
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_STATICEDGE | 0x80000000L
+CAPTION "MouSer v0.1 [OnceUponATime]"
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_COMPORT,118,30,47,12,ES_AUTOHSCROLL
+    CONTROL         "Swap Buttons",IDC_SWAPCHECK,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,106,44,59,11
+    CONTROL         "Mirror X",IDC_MIRRORXCHECK,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,13,66,41,11
+    CONTROL         "Mirror Y",IDC_MIRRORYCHECK,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,69,66,41,11
+    CONTROL         "Rotate",IDC_ROTATECHECK,"Button",BS_AUTOCHECKBOX | 
+                    BS_RIGHTBUTTON | WS_TABSTOP,129,65,37,11
+    ICON            IDI_APPICON,IDC_STATIC,10,6,20,20
+    LTEXT           "Serial Mouse Driver for Windows CE",IDC_STATIC,41,3,121,
+                    10
+    CTEXT           "www.damnsoft.org",IDC_STATIC,7,83,75,12,WS_BORDER
+    LTEXT           "Based on code by Microsoft (*)",IDC_STATIC,7,34,57,19
+    LTEXT           "(*) But Don't be afraid...",IDC_STATIC,88,85,84,9
+    LTEXT           "By Elias Zacarias",IDC_STATIC,100,12,54,8
+    LTEXT           "PORT:",IDC_STATIC,90,31,21,11
+    GROUPBOX        "Options",IDC_STATIC,74,22,98,35
+    GROUPBOX        "Coord System.",IDC_STATIC,7,57,165,23
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 96
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Sys. Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON    DISCARDABLE     "big_icon.ico"
+#endif    // Neutral (Sys. Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
