@@ -9,5 +9,7 @@ Please bear in mind that I wrote this software a long time ago, so there are a f
 * I was young, and naive, and inexperienced, so don't expect brilliantly written software, nor anything resembling decent code practices.
 * Related: There's not much documentation to begin with, but you will most likely find massive amounts of broken English inside.
 * Everything here was developed using **really** old software, like Microsoft's eMbedded VC++ 3.0. Getting a hold of those tools won't be easy.
-* Unfortunately I do not have a list of all the required tools, so I cannot help you setup a development enviroment that'd compile any of this.
+* Unfortunately I do not have a list of all the required tools, so I cannot help you setup a development environment that'd compile any of this.
 * Apparently I was working on a 2.4 version of Winwatch but never released it? Anyway, the source code is there if you want to take a look.
+
+Eons ago I published all of this software on my website http://damnsoft.org/, and I while I've moved to other projects, most of it remains available in http://damnsoft.org/web/software/museum.
